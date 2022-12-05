@@ -134,7 +134,7 @@ pipeline.load_ckpt(ckpt_path=ckpt_path)
 pc_idx = 256 # change the index to get a different point cloud
 test_split = dataset.get_split("test")
 data = test_split.get_data(pc_idx)
-
+#badran
 # run inference on a single example.
 # returns dict with 'predict_labels' and 'predict_scores'.
 result = pipeline.run_inference(data)
