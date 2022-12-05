@@ -148,7 +148,7 @@ colors = [COLOR_MAP[clr] for clr in list(result['predict_labels'])] # Get the co
 pcd.colors = o3d.utility.Vector3dVector(colors) # Add color data to the point cloud
 
 # Create visualization
-custom_draw_geometry(pcd)
+#custom_draw_geometry(pcd)
 
 # Get one test point cloud from the custom dataset
 pc_idx = 5 # change the index to get a different point cloud
@@ -163,7 +163,7 @@ colors = [COLOR_MAP[clr] for clr in list(result['predict_labels'])]
 pcd.colors = o3d.utility.Vector3dVector(colors)
 
 # Create visualization
-custom_draw_geometry(pcd)
+#custom_draw_geometry(pcd)
 
 # evaluate performance on the test set; this will write logs to './logs'.
 #pipeline.run_test()
