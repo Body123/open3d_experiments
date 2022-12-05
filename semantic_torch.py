@@ -7,6 +7,7 @@ import numpy as np
 
 import glob
 
+
 def custom_draw_geometry(pcd):
 	vis = o3d.visualization.Visualizer()
 	vis.create_window()
@@ -101,14 +102,14 @@ for label in COLOR_MAP:
 	COLOR_MAP[label] = tuple(val/255 for val in COLOR_MAP[label])
 
 # Load an ML configuration file
-cfg_file = "/home/carlos/Open3D/build/Open3D-ML/ml3d/configs/randlanet_semantickitti.yml"
+cfg_file = "/content/Open3D-ML/ml3d/configs/randlanet_semantickitti.yml"
 cfg = _ml3d.utils.Config.load_from_file(cfg_file)
 
 # Load the RandLANet model
 model = ml3d.models.RandLANet(**cfg.model)
 # Add path to the SemanticKitti dataset and your own custom dataset
-cfg.dataset['dataset_path'] = '/media/carlos/SeagateExpansionDrive/kitti/SemanticKitti/'
-cfg.dataset['custom_dataset_path'] = './pcds'
+cfg.dataset['dataset_path'] = '/content/drive/MyDrive/Graduation Project/sementic_segmentation/sementicKitti/unzip/'
+cfg.dataset['custom_dataset_path'] = '/content/open3d_experiments/pcds'
 
 # Load the datasets
 dataset = ml3d.datasets.SemanticKITTI(cfg.dataset.pop('dataset_path', None), **cfg.dataset)
