@@ -108,7 +108,7 @@ cfg = _ml3d.utils.Config.load_from_file(cfg_file)
 # Load the RandLANet model
 model = ml3d.models.RandLANet(**cfg.model)
 # Add path to the SemanticKitti dataset and your own custom dataset
-cfg.dataset['dataset_path'] = '/content/drive/MyDrive/Graduation Project/sementic_segmentation/sementicKitti/unzip/'
+cfg.dataset['dataset_path'] = '/content/drive/MyDrive/Graduation_Project/sementic_segmentation/sementicKitti/unzip/'
 cfg.dataset['custom_dataset_path'] = '/content/open3d_experiments/pcds'
 
 # Load the datasets
